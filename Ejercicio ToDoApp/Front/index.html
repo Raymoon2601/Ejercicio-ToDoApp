@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5be6405eba.js" crossorigin="anonymous"></script>
+    <title>To Do application</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>LISTA TO DO</h1>
+            <section class="nav-tools">
+                <ul>
+                    <li><a id="addTask" ><i class="fas fa-plus"></i></a></li>
+                    <li><a href=""><i class="fas fa-cogs"></i></a></li>
+                </ul>
+            </section>
+        </nav>
+    </header>
+    <section class="modal">
+        <section class="modal-header">
+            <h2>AGREGAR TAREA</h2>
+            <button type="button" value="" class="close"><i
+                    class="fas fa-times"></i></button>
+            </section>
+        <section class="modal-content">
+            <label for="nombre">Tarea:</label>
+            <input type="hidden" id="idTarea">
+            <input type="text" id="nombre" placeholder="Escriba su tarea aquí...">
+        </section>
+        <section class="buttons">
+            <input type="button" value="Agregar" class="btnSave">
+        </section>
+    </section>
+    <main>
+        <section class="task-board">
+            <section class="task-board-head">
+                <input type="search" name="" id="" placeholder="Buscar tarea...">
+                <section class="filters">
+                    <span>Mostrar:</span>
+                    <button class="btn-filter" id="all">Todo</button>
+                    <button class="btn-filter" id="pending">Pendiente</button>
+                    <button class="btn-filter" id="completed">Completado</button>
+                </section>
+            </section>
+            <section class="task-board-body">
+                <section class="task-card">
+                    <div class="card-status">
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                    <section class="task-content">
+                        <span>Hacer katas</span>
+                        <button><i class="fas fa-trash"></i></button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    <script src="js/requests.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
